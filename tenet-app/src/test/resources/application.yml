@@ -1,0 +1,10 @@
+spring:
+  # 环境 dev|test|prod
+  profiles:
+    active: dev
+loggin:
+  config: file:./log4j2.xml
+mybatis:
+  mapperLocations: classpath:mapper/*.xml
+  config-location: classpath:mybatis-config.xml
+  typeAliasesPackage: io.sean.entity
