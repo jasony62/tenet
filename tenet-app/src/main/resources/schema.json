@@ -1,0 +1,72 @@
+{
+  "in_topics": {
+    "test_demo": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "type": "string",
+            "optional": false,
+            "field": "Event"
+          },
+          {
+            "type": "string",
+            "optional": true,
+            "field": "SequenceNumber"
+          },
+          {
+            "type": "string",
+            "optional": true,
+            "field": "Privilege"
+          },
+          {
+            "field": "dstchan_hangup",
+            "optional": true,
+            "type": "struct",
+            "fields": [
+              {
+                "type": "string",
+                "optional": true,
+                "field": "Cause"
+              },
+              {
+                "type": "string",
+                "optional": true,
+                "field": "Cause_txt"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "out_topic":{
+    "test_demo1": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "type": "string",
+            "optional": true,
+            "field": "taskId"
+          },
+          {
+            "type": "string",
+            "optional": true,
+            "field": "taskStatus"
+          },
+          {
+            "type": "string",
+            "optional": true,
+            "field": "taskHolder"
+          },
+          {
+            "optional": true,
+            "type": "string",
+            "field": "jsonData"
+          }
+        ]
+      }
+    }
+  }
+}
